@@ -85,10 +85,8 @@ func decode(jsonStr string) Product {
 }
 
 func main() {
-	// 1
 	fmt.Println("Hello World!")
 
-	// 2
 	var a int32
 	a = 12
 	fmt.Printf("Integer a = %d\n", a)
@@ -97,14 +95,9 @@ func main() {
 	b = 1.2
 	fmt.Printf("Float b = %f\n", b)
 
-	var str string
-	str = "Hello World"
-	fmt.Printf("String str = %s\n", str)
-
 	c := false
 	fmt.Printf("Boolean = %t\n", c)
 
-	// 3
 	sum := 0
 	for i := 0; i < 10; i++ {
 		if isPositive(i) {
@@ -113,7 +106,7 @@ func main() {
 	}
 	fmt.Printf("Sum = %d\n", sum)
 
-	const Weekday int = iota + 1
+	const Weekday int = 2
 	switch Weekday {
 	case 1:
 		fmt.Println("Monday")
@@ -123,31 +116,27 @@ func main() {
 		fmt.Println("Thursday")
 	}
 
-	// 4
 	fmt.Printf("Sum = %d\n", add(2, 3))
 	swap(2, 3)
 	fmt.Println(quotientRemainder(8, 5))
 
-	// 5
 	person := Person{Name: "Azamat", Age: 21}
 	person.Greeting()
 
-	// 6
 	mgr := Manager{
-		Employee: Employee{Name: "Azamat", ID: 10},
+		Employee: Employee{
+			Name: "assdasd", ID: 10},
 		Department: "IT",
 	}
 
 	mgr.Work()
 
-	// 7
 	circle := Circle{r: 3}
 	rectangle := Rectangle{a: 3, b: 4}
 
 	PrintArea(&circle)
 	PrintArea(&rectangle)
 
-	// 8
 	product := Product{Name: "Iphone", Price: 999.99, Quantity: 10}
 
 	jsonStr := encode(product)
@@ -164,7 +153,6 @@ func isPositive(a int) bool {
 	return false
 }
 
-// 4
 
 func add(a, b int) (sum int) {
 	sum = a + b
