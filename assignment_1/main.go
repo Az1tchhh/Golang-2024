@@ -7,7 +7,6 @@ import (
 	"math"
 )
 
-// 5
 type Person struct {
 	Name string
 	Age  int
@@ -17,7 +16,6 @@ func (p *Person) Greeting() {
 	fmt.Printf("Hello, %s!", p.Name)
 }
 
-// 6
 type Employee struct {
 	Name string
 	ID   int
@@ -32,7 +30,6 @@ func (e *Employee) Work() {
 	fmt.Printf("Working on %s, %d", e.Name, e.ID)
 }
 
-// 7
 
 type Circle struct {
 	r float64
@@ -59,7 +56,6 @@ func PrintArea(s Shape) {
 	fmt.Printf("Area: %.2f\n", s.area())
 }
 
-// 8
 
 type Product struct {
 	Name     string  `json:"name"`
