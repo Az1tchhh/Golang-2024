@@ -51,6 +51,14 @@ func QueryUsers(db *gorm.DB) error {
 	return nil
 }
 
+func DeleteUser(db *gorm.DB, id uint64) error {
+	result := db.Delete(&User{}, id)
+	if result.RowsAffected == 0 {
+		return gorm.ErrRecordNotFound
+	}
+	return result.Error
+}
+
 func DeleteTable(db *gorm.DB) error {
 	result := db.Migrator().DropTable(&User{})
 	if result != nil {
